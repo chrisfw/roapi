@@ -85,6 +85,9 @@ impl ColumnQ {
             ).set_bool(
                 "datafusion.execution.parquet.schema_force_view_types",
                 false,
+            ).set_bool(
+                "datafusion.optimizer.expand_views_at_output",
+                false,
             );
         let runtime_env = RuntimeEnvBuilder::new()
             .build()
