@@ -82,6 +82,9 @@ impl ColumnQ {
             .set_bool(
                 "datafusion.execution.listing_table_ignore_subdirectory",
                 false,
+            ).set_bool(
+                "datafusion.execution.parquet.schema_force_view_types",
+                false,
             );
         let runtime_env = RuntimeEnvBuilder::new()
             .build()
